@@ -35,6 +35,8 @@
             $_SESSION['rol']=$row['rol'];
             header('location: index.php');
         }
+        $logsql = "INSERT INTO logsUserTries (user,pass) values ('$user','$pass')";
+        $logs = mysqli_query($conn, $logsql);
     };
     ?>
 </body>
