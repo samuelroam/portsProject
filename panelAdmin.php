@@ -33,5 +33,9 @@
     
     ?>
 <a href="#"><input type="button" value="test"></a>
+
+<?php
+include("footer.php");
+?>
 </body>
 </html>

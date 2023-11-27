@@ -11,5 +11,8 @@
     ?>
     <h1>index</h1>
     <p>Bienvenido a esta página en constucción. Deberá ser eventualmente un sistema de gestión y administración de un servidor web. Disfrute su estancia</p>
+    <?php
+    include("footer.php");
+    ?>
 </body>
 </html>

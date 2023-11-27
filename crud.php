@@ -30,6 +30,7 @@ include("connection.php");
         } else {
             echo 'Error: '. mysqli_error($conn);
         };
+        include("footer.php");
         ?>
 </body>
 </html>

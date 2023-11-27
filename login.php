@@ -34,9 +34,11 @@
             $_SESSION['rol']=$row['rol'];
             header('location: index.php');
         }
-        $logsql = "INSERT INTO logsUserTries (user,pass) values ('$user','$pass')";
+        $fecha = date("Y-m-d H:i:s");
+        $logsql = "INSERT INTO logsUserTries (user,pass,fecha) values ('$user','$pass','$fecha')";
         $logs = mysqli_query($conn, $logsql);
-    };
+        
+    };include("footer.php");
     ?>
 </body>
 </html>

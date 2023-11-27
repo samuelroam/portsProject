@@ -13,6 +13,7 @@
     }else{header('location: index.php');
     }
     session_destroy();
+    include("footer.php");
     ?>
 </body>
 </html>
