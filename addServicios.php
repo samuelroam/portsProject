@@ -9,6 +9,9 @@
     <?php
         include('nav.php');
         include('connection.php');
+        if(!isset($_SESSION['user'])){
+            header('location: index.php');
+        }else{
         ?>
         <form action="addServicios.php" method="POST">
             <table>
@@ -28,12 +31,12 @@
                 echo("buenos dias");
                 $puerto = $_POST['puerto'];
                 $servicio = $_POST['servicio'];
-                echo "$puerto.$servicio";
+                echo "Se ha añadido correctamente el puerto $puerto que corresponde al servicio $servicio";
                 $sql = "INSERT INTO estadopuertos (puerto,servicio) VALUES ('$puerto','$servicio')";
                 $insert = mysqli_query($conn,$sql);
             }else{
-                echo "buenas noches";
             };
+        };
         ?>
 </body>
 </html>

@@ -15,7 +15,7 @@
         <input type="text" name="user" id="user">
         <br>
         <label for="pass">password</label>
-        <input type="text" name="pass" id="pass">
+        <input type="password" name="pass" id="pass">
         <br>
         <input type="submit" name="send" value="send">
     </form>
@@ -25,7 +25,6 @@
     if(isset($_POST['send'])){
         $user = $_POST['user'];
         $pass = $_POST['pass'];
-        print ($user.$pass);
 
         $sql = "SELECT user,pass,rol from users where user='$user' and pass='$pass'";
         $result = mysqli_query($conn, $sql);

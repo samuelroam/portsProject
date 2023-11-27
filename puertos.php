@@ -12,7 +12,7 @@
     $host = 'llavia.ddns.net';
     if(!isset($_SESSION['user'])){
         header('location: index.php');
-    };
+    }else{
     ?>
     <table>
         <tr>
@@ -41,6 +41,7 @@
         print("<td>$service</td>");
         print("</tr>");
     };
+};
     ?>
     </table>
 </body>

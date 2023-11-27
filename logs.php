@@ -8,6 +8,7 @@
 <body>
     <?php
     include("nav.php");
+    include("connection.php");
     if(!isset($_SESSION['user'])){
         header('Location: index.php');
     }else{
@@ -36,7 +37,8 @@ passthru($command,$output);
         shell_exec($command);
         $output = file_get_contents($outputFilename);
         echo nl2br($output);*/
-
+        $logsql = "INSERT INTO terminalLog (command) values ('$command')";
+        $logs = mysqli_query($conn, $logsql);;
 
 
 
