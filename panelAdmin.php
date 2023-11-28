@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AdminPanel</title>
 </head>
 <body>
     <?php
-        include("nav.php");
-        include("connection.php");
+        include("components/nav.php");
+        include("components/connection.php");
         $sql = "SELECT id,puerto, servicio from estadopuertos;";
     $result = mysqli_query($conn,$sql);
     $cantidad = mysqli_num_rows($result);
@@ -35,7 +35,7 @@
 <a href="#"><input type="button" value="test"></a>
 
 <?php
-include("footer.php");
+include("components/footer.php");
 ?>
 </body>
 </html>

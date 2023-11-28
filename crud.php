@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Gestión de servicios</title>
 </head>
 <body>
     <?php
-include("connection.php");
+include("components/connection.php");
         if(isset($_POST['modificar'])){
             $id = $_POST['id'];
             $port = $_POST['port'];
@@ -30,7 +30,7 @@ include("connection.php");
         } else {
             echo 'Error: '. mysqli_error($conn);
         };
-        include("footer.php");
+        include("components/footer.php");
         ?>
 </body>
 </html>

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>login</title>
 </head>
 <body>
     <?php
-    include("nav.php");
+    include("components/nav.php");
     
     ?>
     <form action="#" method="post">
@@ -21,7 +21,7 @@
     </form>
 
     <?php
-    include("connection.php");
+    include("components/connection.php");
     if(isset($_POST['send'])){
         $user = $_POST['user'];
         $pass = $_POST['pass'];
@@ -38,7 +38,7 @@
         $logsql = "INSERT INTO logsUserTries (user,pass,fecha) values ('$user','$pass','$fecha')";
         $logs = mysqli_query($conn, $logsql);
         
-    };include("footer.php");
+    };include("components/footer.php");
     ?>
 </body>
 </html>

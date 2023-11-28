@@ -7,13 +7,13 @@
 </head>
 <body>
     <?php
-    include("nav.php");
+    include("components/nav.php");
     if(isset($_SESSION['user'])){
     print ("hasta pronto, ".$_SESSION['user']);
     }else{header('location: index.php');
     }
     session_destroy();
-    include("footer.php");
+    include("components/footer.php");
     ?>
 </body>
 </html>
